@@ -4,19 +4,13 @@ Website bán vé xem phim sử dụng Java Sping Boot.
 
 # **2. Giới thiệu:**
 Xây dựng website quản lý bán vé xem phim với các tính năng chính: tìm kiếm phim, đặt vé, chọn suất chiếu và thanh toán.
-Đây là repo tổng hợp lại từ 2 repo khác do chính nhóm em phát triển:
-- Back-end: https://github.com/FloRRenn/Java-Web/tree/backend
-- Front end: https://github.com/FloRRenn/Fe-java/
 <br/>
 
 # **3. Thành viên nhóm:**
-| Sinh Viên                | MSSV         | Github Username   |
-| :----------------------- |:-----------: | -----------------:|
-| Phạm Phúc Đức            | 20520162     | [ducdottoan2002](https://github.com/ducdottoan2002)|
-| Nguyễn Hoàng Phúc        | 20520277     | [hoangfphucs](https://github.com/hoangfphucs)|
-| Nguyễn Đức Tấn           | 20520751     | [FloRRenn](https://github.com/FloRRenn)|
-| Nguyễn Nhật Hiếu Trung   | 20520830     | [nnhieutrung](https://github.com/nnhieutrung)|
-<br/>
+| Sinh Viên                | MSSV         |
+| :----------------------- |:-----------: | 
+| Lê Thành Vũ              | 23IT316      |
+
 
 # **4. Công nghệ:**
 - **Database: MySQL 8.0.32**
@@ -66,26 +60,12 @@ docker-compose down
 	- Hiển thị trực quan database của web (dùng [PHPMyAdmin](https://www.phpmyadmin.net/)).
 <br/>
 
-### **B. Thông tin đăng nhập:**
-| Username         | Password      | Role        |
-|:-----------------|:-------------:|:-----------:|
-| super_admin.1234 | 3Mt^tmM85YUL  | Super Admin |
-| admin.1234       | TiNkErBeLl    | Admin       |
-| user_1	       | k9G*Ni91r!    | User        |
-| user_2	       | hS5f%1*8V1    | User        |
 
-### **C. Thông tin thanh toán VNPAY:**
-- Ngân hàng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`NCB`
-- Số thẻ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`9704198526191432198`
-- Tên chủ thẻ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`NGUYEN VAN A`
-- Ngày phát hành:&nbsp;&nbsp;&nbsp;&nbsp;`07/15`
-- Mật khẩu OTP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`123456`
-<br/><br/>
 
 # **7. Mô hình hoạt động:**
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**A. Mô hình Database:**
 <div align='center'>
-	<img src='images/so_do_databases.PNG' />
+	<img src=/>
 </div>
 <br/>
 
