@@ -65,19 +65,19 @@ docker-compose down
 # **7. Mô hình hoạt động:**
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**A. Mô hình Database:**
 <div align='center'>
-	<img src="https://github.com/FloRRenn/java-web-project/blob/main/images/so_do_databases.PNG?raw=true"/>
+	<img src="so_do_databases.png"/>
 </div>
 <br/>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**B. Mô hình hoạt động cơ bản:**
 <div align='center'>
-	<img src='https://github.com/FloRRenn/java-web-project/raw/main/images/moi_quan_he_cac_web.PNG' />
+	<img src='moi_quan_he_cac_web.png' />
 </div>
 <br/>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**C. Mô hình hoạt động của website dành cho User:**
 <div align='center'>
-	<img src='https://github.com/FloRRenn/java-web-project/raw/main/images/so_do_web.jpg' />
+	<img src='so_do_web.jpg' />
 </div>
 <br/>
 
@@ -124,116 +124,71 @@ docker-compose down
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**A. Trang Chủ**
 <div align='center'>
-	<img src='images/trang_chu.png' />
+	<img src='trang_chu.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**B. Đăng nhập/đăng ký User:**
 <div align='center'>
-	<img src='images/userlogin.png' />
+	<img src='userlogin.png' />
 	<br>
-	<img src='images/usersignup.png' />
+	<img src='usersignup.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**C. Trang chọn phim**
 <div align='center'>
-	<img src='images/danh_muc.png' />
+	<img src='danh_muc.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**D. Trang chi tiết phim:**
 <div align='center'>
-	<img src='images/chi_tiet_phim.png' />
+	<img src='chi_tiet_phim.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**E. Trang chọn giờ xem:**
 <div align='center'>
-	<img src='images/chon_gio_xem.png' />
+	<img src='chon_gio_xem.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**F. Trang Chọn ghế:**
 <div align='center'>
-	<img src='images/chon_vi_tri.png' />
+	<img src='chon_vi_tri.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**G. Trang thanh toán:**
 <div align='center'>
-	<img src='images/thanh_toan.jpg' />
+	<img src='thanh_toan.jpg' />
 </div>
 </br></br>
 
 ## **10.2. Website cho Admin:**
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**A. Đăng nhập Admin:**
 <div align='center'>
-	<img src='images/adminlogin.png' />
+	<img src='adminlogin.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**B. Admin quản lý tài khoản:**
 <div align='center'>
-	<img src='images/admin_quan_ly_tk.png' />
+	<img src='admin_quan_ly_tk.png' />
 </div>
 </br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**C. Admin thêm suất chiếu:**
 <div align='center'>
-	<img src='images/admin_change_show.png' />
+	<img src='admin_change_show.png' />
 </div>
 </br></br>
 
 ## **10.3. Website cho API:**
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Trang API document:**
 <div align='center'>
-	<img src='images/swagger_api.jpg' />
+	<img src='swagger_api.jpg' />
 </div>
 </br></br>
 
-# **11. Các Lỗ hổng được thiết kế trong website:**
-### **A. Bypass xác thực của JWT Token:**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web API sử dụng JWT token để xác thực và phân quyền người dùng, thuật toán được sử dụng cho việc cấp và xác thực là RS256. Lỗ hổng này được mô phỏng dựa trên CVE-2015-9235, xảy ra là trang web sẽ dựa vào thuật toán trên phần header của token để thực hiện quy trình xác thực sẽ thuật toán đó. Khi trang web sử dụng thuật toán RS/ES để ký (dùng private key) và xác thực (dùng public key) cho token, nhưng khi kẻ tấn công có được public key, chúng sẽ sử dụng thuật toán HS (dùng public key cho cả việc ký và xác thực) để tạo token, khi đưa cho web kiểm tra, nó sẽ dựa vào thuật toán trong phần header của token để lựa chọn thuật toán xác thực, và vì cả thuật toán RS/ES và HS đều dùng public key để xác thực nên việc bypass sẽ thành công. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:** Cao.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:** Toàn bộ các trang web.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:** Leo thang đặc quyền, có khả năng lấy và chỉnh sửa toàn bộ data có trong database thông qua các API.
-</br>
-
-### **B. Broken Access Control:**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uri GET /api/auth/login không có cơ chế giới hạn lượt truy cập sau nhiều lần đăng nhập không thành công dẫn đến kẻ tấn công có thể thực hiện tấn công brute-force để dò mật khẩu của nạn nhân.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:** Trung bình.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:** Chỉ ảnh hường đến user để mật khẩu yếu và dễ đoán.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:** Đánh cắp thông tin và kiểm soát tài khoản của nạn nhân.
-</br>
-
-### **C. Insecure Authentication:**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trang web có chức năng thay đổi mật khẩu mới khi người dùng quên mật khẩu, khi đó một mã xác thực sẽ được gửi đến mail của người dùng, cho phép họ thay đổi mật khẩu cho mình. Trong mã xác thực này chứ tên của người dùng và thời hạn sử dụng, trang web sẽ dựa trên các thông tin này để cho phép đổi mật khẩu mới hay không, tuy nhiên mã xác thực này rất yếu, kẻ tấn công có khả năng tạo một mã xác thực khác tương tự và có thể thay đổi mật khẩu của bất kỳ user nào trong hệ thống.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:** Cao.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:** Tất cả user tồn tại trong hệ thống.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:** Đánh cắp thông tin và kiểm soát tài khoản của nạn nhân. Leo thang đặc quyền đối các tài khoản admin.
-</br>
-
-### **D. Lỗ hổng**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lỗ hổng
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:**
-</br>
-
-### **E. Lỗ hổng**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lỗ hổng
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:**
-</br>
-
-### **F. Lỗ hổng**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lỗ hổng
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mức độ ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Phạm vi ảnh hưởng:**
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hậu quả:**
-</br>
-
----
-© Group **Pengu** - University of Information Technology
