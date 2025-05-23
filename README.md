@@ -65,25 +65,25 @@ docker-compose down
 # **7. Mô hình hoạt động:**
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**A. Mô hình Database:**
 <div align='center'>
-	<img src=/>
+	<img src="https://github.com/FloRRenn/java-web-project/blob/main/images/so_do_databases.PNG?raw=true"/>
 </div>
 <br/>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**B. Mô hình hoạt động cơ bản:**
 <div align='center'>
-	<img src='images/moi_quan_he_cac_web.PNG' />
+	<img src='https://github.com/FloRRenn/java-web-project/raw/main/images/moi_quan_he_cac_web.PNG' />
 </div>
 <br/>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**C. Mô hình hoạt động của website dành cho User:**
 <div align='center'>
-	<img src='images/so_do_web.jpg' />
+	<img src='https://github.com/FloRRenn/java-web-project/raw/main/images/so_do_web.jpg' />
 </div>
 <br/>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**D. Mô hình hoạt động của website dành cho Admin:**
 <div align='center'>
-	<img src='images/so_do_web_admin.jpg' />
+	<img src='https://github.com/FloRRenn/java-web-project/raw/main/images/so_do_web_admin.jpg' />
 </div>
 <br/><br/>
 
