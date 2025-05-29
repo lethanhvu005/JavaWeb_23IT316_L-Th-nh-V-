@@ -1,4 +1,4 @@
-# ** Video giới thiệu**
+# Video giới thiệu dự án :
 https://drive.google.com/file/d/1BYfJVRKD75UAL6c8_RJcxgy0ADqOu9Cs/view?usp=sharing
 <br/>
 # **1. Tên dự án:**
