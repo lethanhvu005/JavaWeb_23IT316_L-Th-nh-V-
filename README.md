@@ -1,3 +1,6 @@
+# ** Video giới thiệu**
+https://drive.google.com/file/d/1BYfJVRKD75UAL6c8_RJcxgy0ADqOu9Cs/view?usp=sharing
+<br/>
 # **1. Tên dự án:**
 Website bán vé xem phim sử dụng Java Sping Boot.
 <br/>
