@@ -16,13 +16,13 @@ Xây dựng website quản lý bán vé xem phim với các tính năng chí
 
 
 # **4. Công nghệ:**
-- **Database: MySQL 8.0.32**
+- **Database: MySQL **
 
 - **Backend: Restful API**
-  - Java 17
-  - Spring Boot 3.0.6
-  - Maven 3.9.1
-  - JWT (io.jsonwebtoken) 0.11.5
+  - Java 
+  - Spring Boot 
+  - Maven 
+  - JWT (io.jsonwebtoken)
 
 - **Frontend:**
 	- HTML
